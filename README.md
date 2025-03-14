@@ -2,18 +2,25 @@
 
 int main() {
     int escolha;
+
     
-    printf("### ainda nao decedido ###\n");
-    
+    printf("### nao decidido ###\n");
+
    
     printf("1. Pergunta e Resposta\n");
     printf("2. Cobra na Caixa!\n");
     printf("3. Gousmas War\n");
     printf("4. Sair\n");
+
+   
+    printf("Escolha uma opcao (1-4): ");
     
-    printf("Escolha uma opção (1-4): ");
-    scanf("%d", &escolha);
     
+    if (scanf("%d", &escolha) != 1) {
+        printf("Entrada invalida! Por favor, insira um número entre 1 e 4.\n");
+        return 1; 
+    }
+
     switch (escolha) {
         case 1:
             printf("Você escolheu: Pergunta e Resposta\n");
@@ -30,6 +37,6 @@ int main() {
         default:
             printf("Opção inválida! Escolha um número entre 1 e 4.\n");
     }
-    
-    return 0;
+
+    return 0;
 }
